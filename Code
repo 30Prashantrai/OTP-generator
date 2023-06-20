@@ -1,0 +1,13 @@
+#Code that generates 500 otp of 4 digits taking 10 digits phone number from the users 
+import random
+import string
+    
+user_input = input("Enter the phone number: ")   
+
+
+if len(user_input) == 10 and user_input.isdigit():
+    x = string.digits
+    rand_val = random.choices(x, k=4)
+    print("Your OTP is:","".join(rand_val))
+else: 
+    print("Error, Please Enter 10 digits phone number.")
